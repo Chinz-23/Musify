@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/b1e770f3e1.js"
+      crossorigin="anonymous"></script>
+
+    <title>Divyanshu's Music Player</title>
+    <style>
+
+      .icon-latest {
+        /* font-size: 50px;
+        color: rgba(255, 255, 255, 0.726); */
+        display: none;
+      }
+
+      .latest-song .latest-song-image-container:hover .icon-latest {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- bootstrap added in the code -->
+
+    <header>
+      <nav class="navbar navbar-expand-lg bg-transparent">
+        <div class="container-fluid ps-0">
+          <a class="navbar-brand" href="main.html">
+            <img src="images/Logo.jpg" id="logo" />
+            <span>Musify</span>
+          </a>
+          <button
+            class="navbar-toggler bg-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-6">Latest English</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section-2">Popular Artists </a>
+              </li>
+            </ul>
+
+            <form class="d-flex" role="search">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search" />
+              <button class="btn btn-secondary" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+
+            <ul class="bell-icon navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <i class="fa-solid fa-bell" style="color: #ffffff"></i>
+              </li>
+              <li class="nav-item profile-image">
+                <img src="images/CV IMAGE.jpeg" />
+                <ul class="image-dropdown">
+                  <li><a href="#">Login</a></li>
+                  <li ><a href="#">Sign-up</a></li>
+                  <!-- style="border-bottom: none" -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-div">
+      <section>
+        <div id="section-1">
+          <div class="container-fluid" style="z-index: 0">
+            <div class="row">
+              <div class="col-12">
+                <div class="owl-carousel owl-theme" id="carousal1">
+                  <div class="item image-container">
+                    <img
+                      src="images/slider image 1.jpg"
+                      alt="Image 1"
+                      class="carousel-image" />
+                  </div>
+                  <div class="item image-container">
+                    <img
+                      src="images/slider image 2.jpg"
+                      alt="Image 2"
+                      class="carousel-image" />
+                  </div>
+                  <div class="item image-container">
+                    <img
+                      src="images/slider image 3.jpg"
+                      alt="Image 3"
+                      class="carousel-image" />
+                  </div>
+                  <div class="item image-container">
+                    <img
+                      src="images/slider image 4.jpg"
+                      alt="Image 4"
+                      class="carousel-image" />
+                  </div>
+                  <div class="item image-container">
+                    <img
+                      src="images/slider image 6.jpg"
+                      alt="Image 6"
+                      class="carousel-image" />
+                  </div>
+                  <div class="item image-container">
+                    <img
+                      src="images/slider image 5.jpg"
+                      alt="Image 5"
+                      class="carousel-image" />
+                  </div>
+
+                  <!-- Add more images as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+   
+        <h2 class = "section-2-heading" style="text-align: center; letter-spacing: 15px;">Latest Release</h2>
+        <h6 style="color: white;font-size: 20px; font-family: Poppins, sans-serif;letter-spacing: 8px;text-align: center;">(Fully functional)</h6>
+        
+        <div id="section-2">
+          <div class="latest-song ">
+            <div class="latest-song-image-container latest-song-pillowtalk" id= "icon-pillowtalk">
+              <i class="icon-latest fa-solid fa-play" id = "icon-latest1"></i>
+            </div>
+            <div class="latest-song-content">
+              <h6 class="duration-heading">
+                <div class="dropdown">
+                  <button class="btn btn-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-ellipsis-vertical fa-rotate-90 menu"></i>
+                  </button>
+                  <ul class="dropdown-menu p-3 bg-dark">
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-solid fa-play dropdown-icon"></i> Play now</button></li>
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-solid fa-plus dropdown-icon"></i>Add to queue</button></li>
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-regular fa-heart dropdown-icon"></i>Add to favourites</button></li>
+                    <li><button class="dropdown-item text-white" type="button"><i class = "fa-solid fa-list dropdown-icon"></i>Get info</button></li>
+                  </ul>
+                </div>
+                <p>3:43</p>
+              </h6>
+              <p class="song-title">
+                <h4 style = "font-size:30px">Pillowtalk</h4>
+                <h5 style = "margin-top:-5px;">Zayn Malik</h5>
+                <h6><br>AUG 11 , 2017</h6>
+              </p>
+            </div>
+          </div>
+          <div class="latest-song ">
+            <div class="latest-song-image-container latest-song-unravel" id="icon-unravel">
+              <i class="icon-latest fa-solid fa-play" id = "icon-latest2"></i>
+            </div>
+            <div class="latest-song-content">
+              <h6 class="duration-heading">
+                <div class="dropdown">
+                  <button class="btn btn-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-ellipsis-vertical fa-rotate-90 menu"></i>
+                  </button>
+                  <ul class="dropdown-menu p-3 bg-dark">
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-solid fa-play dropdown-icon"></i> Play now</button></li>
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-solid fa-plus dropdown-icon"></i>Add to queue</button></li>
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-regular fa-heart dropdown-icon"></i>Add to favourites</button></li>
+                    <li><button class="dropdown-item text-white" type="button"><i class = "fa-solid fa-list dropdown-icon"></i>Get info</button></li>
+                  </ul>
+                </div>
+                <p>3:43</p>
+              </h6>
+              <p class="song-title">
+                <h4 style = "font-size:30px">Unravel</h4>
+                <h5 style = "margin-top:-5px;">Toru Kitajima</h5>
+                <h6><br>JUN 14 , 2016</h6>
+              </p>
+            </div>
+          </div>
+          <div class="latest-song ">
+            <div class="latest-song-image-container latest-song-on-top" id = "icon-ontop">
+              <i class="icon-latest fa-solid fa-play" id = "icon-latest3"></i>
+            </div>
+            <div class="latest-song-content">
+              <h6 class="duration-heading">
+                <div class="dropdown">
+                  <button class="btn btn-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-ellipsis-vertical fa-rotate-90 menu"></i>
+                  </button>
+                  <ul class="dropdown-menu p-3 bg-dark">
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-solid fa-play dropdown-icon"></i> Play now</button></li>
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-solid fa-plus dropdown-icon"></i>Add to queue</button></li>
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-regular fa-heart dropdown-icon"></i>Add to favourites</button></li>
+                    <li><button class="dropdown-item text-white" type="button"><i class = "fa-solid fa-list dropdown-icon"></i>Get info</button></li>
+                  </ul>
+                </div>
+                <p>3:43</p>
+              </h6>
+              <p class="song-title">
+                <h4 style = "font-size:30px">On Top</h4>
+                <h5 style = "margin-top:-5px;">Karan Aujla</h5>
+                <h6><br>MAY 26, 2022</h6>
+              </p>
+            </div>
+          </div>
+          <div class="latest-song ">
+            <div class="latest-song-image-container latest-song-past-lives" id = "icon-pastlives">
+              <i class="icon-latest fa-solid fa-play" id = "icon-latest4"></i>
+            </div>
+            <div class="latest-song-content">
+              <h6 class="duration-heading">
+                <div class="dropdown">
+                  <button class="btn btn-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-ellipsis-vertical fa-rotate-90 menu"></i>
+                  </button>
+                  <ul class="dropdown-menu p-3 bg-dark">
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-solid fa-play dropdown-icon"></i> Play now</button></li>
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-solid fa-plus dropdown-icon"></i>Add to queue</button></li>
+                    <li><button class="dropdown-item text-white mb-1" type="button"><i class = "fa-regular fa-heart dropdown-icon"></i>Add to favourites</button></li>
+                    <li><button class="dropdown-item text-white" type="button"><i class = "fa-solid fa-list dropdown-icon"></i>Get info</button></li>
+                  </ul>
+                </div>
+                <p>3:43</p>
+              </h6>
+              <p class="song-title">
+                <h4 style = "font-size:30px">Past Lives</h4>
+                <h5 style = "margin-top:-5px;">Farizki</h5>
+                <h6><br>JUN 22, 2023</h6>
+              </p>
+            </div>
+          </div>
+        </div>
+    
+
+        <h2 class = "section-3-heading" style="text-align: center; letter-spacing: 15px;">Popular Artists</h2>
+        <div id = "section-3">
+          <div class="container-fluid" style="z-index: 0">
+            <div class="row">
+              <div class="col-12">
+                <div class="owl-carousel owl-theme" id="carousal2">
+                  <div class="item image-container">
+                    <a href = "ARTIST-coldplay.html">
+                      <i class="icon-latest fa-solid fa-play"></i>
+                      <img
+                      src="images/coldplay.jpg"
+                      alt="Image 1"
+                      class="carousel-image section3-image" />
+                    </a>
+                      <h5>Coldplay</h5>
+
+                  </div>
+                  <div class="item image-container">
+                    <a href="ARTIST-miley.html">
+                      <i class="icon-latest fa-solid fa-play"></i>
+                      <img
+                      src="images/miley cyrus cover.jpg"
+                      alt="Image 2"
+                      class="carousel-image section3-image" />
+                    </a>
+                    <h5>Miley Cyrus</h5>
+
+                    </div>
+                  <div class="item image-container">
+                    <a href="ARTIST-zayn.html">
+                      <i class="icon-latest fa-solid fa-play"></i>
+                      <img
+                      src="images/zaynmalik-cover.webp"
+                      alt="Image 3"
+                      class="carousel-image section3-image" />
+                    </a>
+                      <h5>Zayn Malik</h5>
+                  </div>
+
+                  <div class="item image-container">
+                    <a href="ARTIST-tentacion.html">
+                      <i class="icon-latest fa-solid fa-play"></i>
+                      <img
+                      src="images/xxxTentacion cover.jpg"
+                      alt="Image 4"
+                      class="carousel-image section3-image" />
+                    </a>
+                      <h5>XXX Tentacion</h5>
+                  </div>
+
+                  <div class="item image-container">
+                    
+                    <a href="ARTIST-talhaanjum.html">
+                      <i class="icon-latest fa-solid fa-play"></i>
+                      <img
+                      src="images/talhaanjum cover.jpg"
+                      alt="Image 6"
+                      class="carousel-image section3-image" />
+                    </a>
+                      <h5>Talha Anjum</h5>
+                      
+                  </div>
+                  <div class="item image-container">
+                    <a href="ARTIST-weeknd.html">
+                      <i class="icon-latest fa-solid fa-play"></i>
+                      <img
+                      src="images/weeknd cover.jpg"
+                      alt="Image 5"
+                      class="carousel-image section3-image" />
+                    </a>
+                      <h5>Weeknd</h5>
+                  </div>
+
+                  <!-- Add more images as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id = "section-4">
+          <div class="stations-title stations mx-1" style="background:linear-gradient(black 60%,rgba(0, 0, 0, 0)); border-radius: 0%; height:12rem; width:11rem; box-shadow: none;">
+            <h3>Stations</h3>
+          </div>
+
+          <div class="stations mx-1" style="background-image:radial-gradient(rgba(0, 0, 0, 0.103), rgb(0, 0, 0))  , url('images/stations-love.jpg')">
+            <h3>Love</h3>
+          </div>
+
+          <div class="stations mx-1" style="background-image:radial-gradient(rgba(0, 0, 0, 0.253), rgb(0, 0, 0))  , url('images/stations-retro.jpg')">
+            <h3>Retro</h3>
+          </div>
+
+          <div class="stations mx-1" style="background-image:radial-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0))  , url('images/stations-chill.jpg')">
+            <h3>Chill</h3>
+          </div>
+
+          <div class="stations mx-1" style="background-image:radial-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0))  , url('images/stations-workout.jpg')">
+            <h3>Workout</h3>
+          </div>
+
+          <div class="stations mx-1" style="background-image:radial-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0))  , url('images/stations-rock.png')">
+            <h3>Rock</h3>
+          </div>
+
+          <div class="stations mx-1" style="background-image:radial-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0))  , url('images/stations-pop.jpg')">
+            <h3>Pop</h3>
+          </div>
+          
+        </div>
+
+
+        <h2 class = "section-5-heading" style="text-align: center; letter-spacing: 15px;">Genres</h2>
+        <div id = "section-5">
+
+          <div class="genres" >
+            <h3 class="ms-0 ms-md-3">Party</h3>
+            <img src="images/genres-party.jpg" >
+          </div>
+
+          <div class="genres">
+            <h3>Electronic</h3>
+            <img src="images/genres-electronic.jpg">
+          </div>
+
+          <div class="genres">
+            <h3>Road Trip</h3>
+            <img src="images/genres-roadTrip.jpg">
+          </div>
+
+        </div>
+
+
+        <h2 class = "section-6-heading" style="text-align: center; letter-spacing: 15px;">Latest English</h2>
+        <div id = "section-6">
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestEnglish/paint the town red.webp">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Paint the Town Red</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">Doja Cat</h4>
+          </div>
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestEnglish/Le monde.webp">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Le Monde</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">Richard Carter</h4>
+          </div>
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestEnglish/strangers.png">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Strangers</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">Kenya Grace</h4>
+          </div>
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestEnglish/telekinesis.png">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Telekinesis</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">Travis Scott</h4>
+          </div>
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestEnglish/ecstacy.jpg">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Ecstacy (slowed)</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">SUICIDAL-IDOL</h4>
+          </div>
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestEnglish/hotline.jpg">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Hotline</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">Billie Eilish</h4>
+          </div>
+        </div>
+
+
+        <!-- <---all the styling in section 7 is same as section-6 hence ive used id's and classes of section-6 for section-7 ----> 
+        <h2 class = "section-7-heading" style="text-align: center; letter-spacing: 15px;">Latest Hindi</h2>
+        <div id = "section-6">
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestHindi/levels.jpg">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Levels</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">Sidhu Moosewala</h4>
+          </div>
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestHindi/aasan nhi yahan.jpg">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Aasan Nhi Yahan</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">Arijit Singh</h4>
+          </div>
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestHindi/brownrang.jpg">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Brown Rang</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">Honey Singh</h4>
+          </div>
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestHindi/checkitout.jpg">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Check It Out</h4>
+            <h4 style="margin-top: 0.1rem; margin-left:5px;font-size:15px; color:lightgrey;">Parmish Verma X Paradox</h4>
+          </div>
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestHindi/banasharabi.jpg">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Bana Sharabi</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">Arijit Singh</h4>
+          </div>
+          <div class = "english-songs">
+            <i class="icon-latest fa-solid fa-play"></i>
+            <img src="images/latestHindi/downers at dusk.jpg">
+            <h4 style="margin-top: 5px; margin-left:5px; line-height:auto;">Downers At Dusk</h4>
+            <h4 style="margin-top: 0.8rem; margin-left:5px; font-size:15px; color:lightgrey;">Talha Anjum</h4>
+          </div>
+        </div>
+      </section>
+
+      <aside>
+        <div id = "aside-title">
+          <h2 style="display: inline;">Queue</h2>
+            <span class="dropdown">
+              <button class="btn btn-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown"       aria-expanded="false">
+                Queue
+              </button>
+              <ul class="dropdown-menu p-2">
+                <li><button class="dropdown-item" type="button">Playlists</button></li>
+                <li><button class="dropdown-item" type="button">Favourite songs</button></li>
+              </ul>
+            </span>
+          </h2>
+        </div>
+
+        <!-- <---The song list in queue section starts here--->  
+
+        <div id = "aside-content" class="mt-1">
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>01</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/starboy-queue.png">
+              <span class="p-2 ps-3 ">
+                <h3>Starboy</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Weeknd</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>02</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/stitches-queue.jpg">
+              <span class="p-2 ps-3">
+                <h3>Stitches</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Shawn Mendes</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>03</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/break my heart-queue.jpg">
+              <span class="p-2 ps-3">
+                <h3>Dua Lipa</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Break My Heart</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>04</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/The_Night_We_Met-queue.jpg">
+              <span class="p-2 ps-3">
+                <h3>The Night We Met</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Lord Huron</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>05</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/somewhere only we know-queue.jpg">
+              <span class="p-2 ps-3">
+                <h3>Somewhere Only We Know</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Keane</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>06</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/cheques-queue.jpg">
+              <span class="p-2 ps-3">
+                <h3>Cheques</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Shubh</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>07</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/9.45-queue.jpg">
+              <span class="p-2 ps-3">
+                <h3>9:45</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Prabh Singh</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>08</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/7 rings-queue.webp">
+              <span class="p-2 ps-3">
+                <h3>7 Rings</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Ariana Grande</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>09</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/sicko mode-queue.jpg">
+              <span class="p-2 ps-3">
+                <h3>Sicko Mode</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Travis Scott</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>10</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/AOT-queue.jpg">
+              <span class="p-2 ps-3">
+                <h3>Nordex</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Tatakae-AOT</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song">
+            <div class="serial-number">
+              <h3>11</h3>
+            </div>
+            <div class = "song-image-name">
+              <img src="images/moonlight-queue.jpg">
+              <span class="p-2 ps-3">
+                <h3>Moonlight</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">XXX Tentacion</p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <div class = "queue-song" style="border-bottom: transparent;">
+            <div class="serial-number">
+              <h3>12</h3>
+            </div>
+            <div class = "song-image-name ">
+              <img src="images/demonslayer-queue.webp">
+              <span class="p-2 ps-3">
+                <h3>Demon Slayer : Opening</h3>
+                <p style="line-height: 20%;color:rgb(216, 216, 216);">Lisa </p>
+              </span>
+            </div>
+            <div class = "icon">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          
+        </div>
+      </aside>
+    
+    
+    <footer id = "myFooter">
+      <div class = "footer-container">
+        <div class = "footer-image">
+          <img src="images/7 rings-queue.webp" id = "footer-image"> 
+          <div class="playback-title ps-4 pt-1">
+            <h3>Currently </h3> 
+            <h3 style="line-height:15px;">Playing </h3>  
+          </div>
+          <div class="playback-icons">
+            <i class="fa-regular fa-heart" style="margin-left:5rem"></i>
+            <i class="fa-solid fa-plus ms-4"></i>
+          </div>
+        </div>
+        
+        <div class = "footer-playback">
+          <i class="me-md-5 me-0 fa-sharp fa-solid fa-forward fa-flip-horizontal" id="footerBack"></i>
+          <i class="fa-solid fa-backward-step" id="footerPrev"></i>
+          <i class="fa-solid fa-circle-pause" id = "footerIcon"></i>
+          <i class="fa-solid fa-backward-step fa-flip-horizontal" id="footerNext"></i>
+          <i class="ms-md-5 ms-0 fa-sharp fa-solid fa-forward" id="footerForward"></i>
+        </div>
+  
+        <div class="footer-end">
+          
+          <i class="fa-solid fa-headphones"></i>
+          <i class="fa-solid fa-computer"></i>
+          <i class="fa-solid fa-volume-low " ></i>
+          <img src="images/sound-waves.png" style="margin-left:-1.1rem">
+          <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+        </div>
+      </div>
+    </footer>
+    
+
+    <!-- <--------------------audio section ---------------> 
+      <audio id="song1" src="songs/Zayn_Malik_-_Pillow_Talk_Olagist.com_.mp3"></audio>
+      <audio id="song2" src="songs/Tokyo Ghoul - Opening  Unravel.mp3"></audio>
+      <audio id="song3" src="songs/On Top.mp3"></audio>
+      <audio id="song4" src="songs/sapientdream - Pastlives (lyrics).mp3"></audio>
+      </div>
+
+    <!-- JS for bootstrap classes -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#carousal1").owlCarousel({
+          loop: true, // Enable loop
+          margin: 10, // Space between items
+          nav: false, // Hide navigation buttons
+          dots: true, // Show navigation dots
+          autoplay: true, // Enable autoplay
+
+          autoplaySpeed: 1000, // Adjust the speed (in milliseconds)
+
+          responsive: {
+            0: {
+              items: 1, // Number of items to show on different screen sizes
+            },
+            600: {
+              items: 3,
+            },
+            992: {
+              items: 4,
+            },
+          },
+          // animateOut: "fadeOut", // CSS class for the exit animation
+          // animateIn: "fadeIn", // CSS class for the entrance animation
+          // smartSpeed: 1000, // Transition speed in milliseconds
+          autoplayTimeout: 3000, // Slide change delay
+        });
+      });
+
+      $(document).ready(function () {
+        $("#carousal2").owlCarousel({
+          loop: true, // Enable loop
+          margin: 10, // Space between items
+          nav: false, // Hide navigation buttons
+          dots: true, // Show navigation dots
+          autoplay: true, // Enable autoplay
+
+          autoplaySpeed: 3000, // Adjust the speed (in milliseconds)
+
+          responsive: {
+            0: {
+              items: 2, // Number of items to show on different screen sizes
+            },
+            700: {
+              items: 4,
+            },
+            992: {
+              items: 5,
+            },
+          },
+          
+          // animateOut: "fadeOut", // CSS class for the exit animation
+          // animateIn: "fadeIn", // CSS class for the entrance animation
+          // smartSpeed: 1000, // Transition speed in milliseconds
+          autoplayTimeout: 2500, // Slide change delay
+        });
+      });
+
+      // <--I should take a stream of arrays to fetch these variables and link them but idk JS yet that is why i am creating every single variable for each song-->
+      var mySong1 = document.getElementById("song1");
+      var mySong2 = document.getElementById("song2");
+      var mySong3 = document.getElementById("song3");
+      var mySong4 = document.getElementById("song4");
+      var icon1 = document.getElementById("icon-pillowtalk");
+      var icon2 = document.getElementById("icon-unravel");
+      var icon3 = document.getElementById("icon-ontop");
+      var icon4 = document.getElementById("icon-pastlives");
+      var footerIcon = document.getElementById("footerIcon");
+      var footerImage = document.getElementById("footer-image")
+      var footerBack = document.getElementById("footerBack")
+      var footerPrev = document.getElementById("footerPrev")
+      var footerForward = document.getElementById("footerForward")
+      var footerNext = document.getElementById("footerNext")
+      var iTag1  = document.getElementById("icon-latest1");
+      var iTag2  = document.getElementById("icon-latest2");
+      var iTag3  = document.getElementById("icon-latest3");
+      var iTag4 = document.getElementById("icon-latest4");
+
+      function stopAllSongs() {
+        mySong1.pause();
+        mySong2.pause();
+        mySong3.pause();
+        mySong4.pause();
+      
+        iTag1.className = "fa-solid fa-play"
+        iTag2.className = "fa-solid fa-play"
+        iTag3.className = "fa-solid fa-play"
+        iTag4.className = "fa-solid fa-play"
+      }
+
+    
+      icon1.onclick = function() {
+        myFooter.style.display = "block"; // Show the footer
+        footerImage.src="images/pilloqwalk latest release.jpg";
+        if(mySong1.paused){
+          stopAllSongs();
+          mySong1.play();
+          iTag1.className = "fa-solid fa-pause";
+          footerIcon.className = "fa-solid fa-circle-pause";
+        }else{
+          mySong1.pause();
+          iTag1.className = "fa-solid fa-play";
+          footerIcon.className = "fa-solid fa-circle-play"
+        }
+
+        footerIcon.onclick = function () {
+          if(mySong1.paused){
+            mySong1.play();
+            footerIcon.className = "fa-solid fa-circle-pause"
+            iTag1.className = "fa-solid fa-pause";
+          }
+          else{
+            mySong1.pause();
+            footerIcon.className = "fa-solid fa-circle-play"
+            iTag1.className = "fa-solid fa-play";
+          }
+        }
+
+        footerBack.onclick = function() {
+          mySong1.currentTime -= 10;
+        }
+        footerPrev.onclick = function() {
+          mySong1.currentTime = 0;
+        }
+        footerNext.onclick = function() {
+          mySong1.currentTime = mySong1.duration;
+          footerIcon.className = "fa-solid fa-circle-play"
+        }
+        footerForward.onclick = function() {
+          mySong1.currentTime += 10 ;
+        }
+      };
+
+      icon2.onclick = function() {
+        myFooter.style.display = "block"; // Show the footer
+        footerImage.src="images/unravel latest release.jpg";
+        if(mySong2.paused){
+          stopAllSongs();
+          mySong2.play();
+          iTag2.className = "fa-solid fa-pause";
+          footerIcon.className = "fa-solid fa-circle-pause";
+        }else{
+          mySong2.pause();
+          iTag2.className = "fa-solid fa-play";
+          footerIcon.className = "fa-solid fa-circle-play"
+        }
+
+        footerIcon.onclick = function () {
+          if(mySong2.paused){
+            mySong2.play();
+            footerIcon.className = "fa-solid fa-circle-pause";
+            iTag2.className = "fa-solid fa-pause";
+          }
+          else{
+            mySong2.pause();
+            footerIcon.className = "fa-solid fa-circle-play";
+            iTag2.className = "fa-solid fa-play";
+          }
+        }
+
+        footerBack.onclick = function() {
+          mySong2.currentTime -= 10;
+        }
+        footerPrev.onclick = function() {
+          mySong2.currentTime = 0;
+        }
+        footerNext.onclick = function() {
+          mySong2.currentTime = mySong2.duration;
+          footerIcon.className = "fa-solid fa-circle-play"
+        }
+        footerForward.onclick = function() {
+          mySong2.currentTime += 10 ;
+        }
+      };
+
+      icon3.onclick = function() {
+        myFooter.style.display = "block"; // Show the footer
+        footerImage.src="images/on-top latest release.jpg";
+        if(mySong3.paused){
+          stopAllSongs();
+          mySong3.play();
+          iTag3.className = "fa-solid fa-pause";
+          footerIcon.className = "fa-solid fa-circle-pause";
+        }else{
+          mySong3.pause();
+          iTag3.className = "fa-solid fa-play";
+          footerIcon.className = "fa-solid fa-circle-play"
+        }
+
+        footerIcon.onclick = function () {
+          if(mySong3.paused){
+            mySong3.play();
+            footerIcon.className = "fa-solid fa-circle-pause"
+            iTag3.className = "fa-solid fa-pause";
+          }
+          else{
+            mySong3.pause();
+            footerIcon.className = "fa-solid fa-circle-play"
+            iTag3.className = "fa-solid fa-play";
+          }
+        }
+
+        footerBack.onclick = function() {
+          mySong3.currentTime -= 10;
+        }
+        footerPrev.onclick = function() {
+          mySong3.currentTime = 0;
+        }
+        footerNext.onclick = function() {
+          mySong3.currentTime = mySong3.duration;
+          footerIcon.className = "fa-solid fa-circle-play"
+        }
+        footerForward.onclick = function() {
+          mySong3.currentTime += 10 ;
+        }
+      };
+
+      icon4.onclick = function() {
+        myFooter.style.display = "block"; // Show the footer
+        footerImage.src="images/past-lives latest release.jpg";
+        if(mySong4.paused){
+          stopAllSongs();
+          mySong4.play();
+          iTag4.className = "fa-solid fa-pause";
+          footerIcon.className = "fa-solid fa-circle-pause";
+        }else{
+          mySong4.pause();
+          iTag4.className = "fa-solid fa-play";
+          footerIcon.className = "fa-solid fa-circle-play"
+        }
+
+        footerIcon.onclick = function () {
+          if(mySong4.paused){
+            mySong4.play();
+            footerIcon.className = "fa-solid fa-circle-pause"
+            iTag4.className = "fa-solid fa-pause";
+          }
+          else{
+            mySong4.pause();
+            footerIcon.className = "fa-solid fa-circle-play"
+            iTag4.className = "fa-solid fa-play";
+          }
+        }
+
+        footerBack.onclick = function() {
+          mySong4.currentTime -= 10;
+        }
+        footerPrev.onclick = function() {
+          mySong4.currentTime = 0;
+        }
+        footerNext.onclick = function() {
+          mySong4.currentTime = mySong4.duration;
+          footerIcon.className = "fa-solid fa-circle-play"
+        }
+        footerForward.onclick = function() {
+          mySong4.currentTime += 10 ;
+        }
+      }; 
+
+    </script>
+  </body>
+</html>

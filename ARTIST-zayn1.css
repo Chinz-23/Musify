@@ -1,0 +1,644 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Play&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* border: 2px solid white; */
+  margin: 0rem;
+  /* background-image: url("images/website background.jpg"); */
+  background-image: linear-gradient(
+    to bottom,
+    rgb(15, 14, 14) 60%,
+    rgba(81, 34, 209, 0.596)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* :root {
+  --border-white: 2px solid rgb(255, 255, 255);
+} */
+/* <<------HEADER--------->> */
+
+/* header {
+  border: var(--border-white);
+} */
+
+header {
+  background-color: black;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+}
+
+header .container-fluid img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#logo {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(0.5px);
+  }
+}
+
+.navbar {
+  /* border: 1px solid white; */
+  padding: 0px;
+}
+
+.navbar-brand {
+  color: white;
+  margin-left: 10px;
+  font-size: 40px;
+  font-family: "Caveat", cursive;
+}
+.navbar-brand:hover {
+  color: rgb(92, 87, 87);
+}
+.nav-item .nav-link {
+  color: white;
+  font-size: 15px;
+}
+.collapse {
+  margin-left: 5rem;
+}
+
+.collapse ul li {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  margin-right: 4rem;
+}
+
+.d-flex input {
+  background-color: rgba(255, 255, 255, 0.315);
+  border: 0px;
+}
+.d-flex button {
+  background: transparent;
+  padding: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.d-flex input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.d-flex button i {
+  width: 2.5rem;
+  font-size: 1.2rem;
+
+  /* margin: 0px; */
+}
+
+.bell-icon .nav-item {
+  margin-right: 0px;
+}
+.bell-icon .nav-item i {
+  margin-right: 2rem;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+.bell-icon i {
+  margin-left: 1.5rem;
+}
+
+.image-dropdown {
+  box-sizing: border-box;
+  display: none;
+  list-style: none;
+  right: 0.3rem;
+  top: 3.7rem;
+}
+
+.image-dropdown li {
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 0.8rem !important;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(121, 121, 121, 0.555);
+  margin-left: -15px;
+}
+
+.image-dropdown li a {
+  text-decoration: none;
+  color: white;
+}
+/* .image-dropdown li:hover {
+  background-color: rgba(0, 0, 0, 0.747);
+} */
+
+.profile-image:hover ul.image-dropdown {
+  display: block;
+  position: absolute;
+}
+
+/* <--------main section-------> */
+
+.main-div {
+  border: var(--border-white);
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  /* flex-wrap: wrap; */
+  height: auto;
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+  padding-left: 1rem;
+}
+
+/* <----various sub-sections for latest songs/latest releases in the section tag------> */
+
+section {
+  border: var(--border-white);
+  width: 70%;
+  margin-bottom: 3.2rem;
+  margin-right: 0.8rem;
+}
+#section-1 {
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  flex-wrap: nowrap;
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+}
+.image-container {
+  background-image: linear-gradient(
+      to right,
+      rgba(15, 14, 14, 0) 40%,
+      rgba(15, 14, 14, 0.274) 45%,
+      rgba(15, 14, 14, 0.349) 50%,
+      rgba(15, 14, 14, 0.534) 60%,
+      rgba(15, 14, 14, 0.815) 80%,
+      rgb(15, 14, 14, 1) 100%
+    ),
+    url("images/zaynmalik-cover.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 35rem;
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 10%;
+}
+.content-container::-webkit-scrollbar {
+  display: none;
+}
+.content-container {
+  width: 55%;
+  height: 35rem;
+  padding-left: 1rem !important;
+  padding-right: 1.5rem;
+  overflow: scroll;
+  background-color: rgb(15, 14, 14, 1);
+}
+.content-container h3 {
+  font-size: 4.5rem;
+  margin-left: -0.5rem;
+  /* letter-spacing: 3px; */
+}
+.content-container h4 {
+  text-align: right;
+  margin-top: -50px;
+}
+.content-container h5 {
+  color: rgba(172, 172, 172, 0.993);
+  margin-top: 10px;
+}
+.content-container p {
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+.content-container .play-all {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(94, 20, 143),
+    rgb(23, 5, 189)
+  ) !important;
+  border: none;
+  font-size: 1.2rem;
+  width: 10rem;
+  margin-top: 2rem;
+  transition-property: all;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+.play-all:active {
+  scale: 0.8;
+}
+.content-container .follow {
+  border: none;
+  margin-left: 4rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+#section-2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+  color: white;
+}
+.playlist {
+  height: 6rem;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  margin-top: 1rem;
+  border: var(--border-white);
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: rgba(0, 0, 0, 0.384);
+  /* box-shadow: 0px 0px 20px 10px rgba(46, 7, 136, 0.493); */
+}
+.playlist .serial-number {
+  font-size: 20px;
+  padding: 0.2rem;
+  width: 5%;
+}
+.playlist-content-image {
+  display: flex;
+  padding: 0.5rem;
+  width: 75%;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+}
+.playlist-content-image .play-logo {
+  color: rgba(255, 255, 255, 0.753);
+  font-size: 40px;
+  position: absolute;
+  display: none;
+  left: 4.5%;
+  top: 30%;
+  z-index: 1;
+}
+.playlist-content-image img {
+  height: 5rem;
+  width: 6rem;
+  object-fit: cover;
+}
+
+.playlist-content-image:hover {
+  opacity: 0.5;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.playlist-content-image:hover .play-logo {
+  display: block;
+}
+.playlist-content {
+  padding-top: 0.2rem;
+  padding-left: 0.5rem;
+  width: auto;
+}
+.playlist .playlist-like {
+  width: 20%;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* <-----aside section ----> */
+aside::-webkit-scrollbar {
+  display: none;
+}
+aside {
+  border: var(--border-white);
+  width: 30%;
+  margin-bottom: 4rem;
+  height: 100dvh;
+  overflow: scroll;
+  position: sticky;
+  top: 75px;
+}
+
+#aside-title {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding-right: 0.5rem;
+  height: auto;
+  border: var(--border-white);
+  display: flex;
+  justify-content: space-between;
+}
+
+#aside-title .dropdown button {
+  color: rgb(136, 136, 136);
+  font-size: 20px;
+}
+
+#aside-title .dropdown-menu {
+  background-color: rgba(32, 31, 31, 0.979);
+}
+
+.dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.63);
+}
+
+#aside-content {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  margin-right: 1.1rem;
+}
+
+.queue-song {
+  color: white;
+  margin-top: 1rem;
+  padding-right: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(0, 0, 0, 0.082);
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 9rem;
+  position: relative;
+  transition: ease-in-out;
+  transition-duration: 0.3s;
+}
+.queue-song .play-song {
+  color: rgba(255, 255, 255, 0.637);
+  font-size: 30px;
+  position: absolute;
+  left: 17%;
+  top: 41%;
+  display: none;
+}
+.queue-song:hover {
+  transform: scaleX(1.05);
+  cursor: pointer;
+}
+.queue-song:hover .play-song {
+  display: block;
+}
+.serial-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+}
+
+.song-image-name {
+  display: flex;
+  width: 80%;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.song-image-name img {
+  height: 100px;
+
+  /* important box-hadow effect */
+  box-shadow: 0px 0px 30px -8px rgb(103, 20, 211),
+    0px 0px 30px -8px rgb(0, 0, 0), 0px 0px 30px -8px rgb(0, 0, 0),
+    0px 0px 30px -8px rgb(0, 0, 0);
+}
+
+#aside-content .icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10%;
+}
+
+/* <----- footer section ----> */
+
+#myFooter {
+  height: 6rem;
+  width: 100vw;
+  background-color: rgb(27, 26, 26);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+.footer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.534);
+}
+.footer-image {
+  width: 20%;
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  font-family: "Play", sans-serif;
+}
+
+.playback-title h3 {
+  font-size: 20px !important;
+}
+.playback-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* margin: auto;
+  text-align: center; */
+}
+.playback-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-image img {
+  height: 100%;
+  width: 8rem;
+  object-fit: cover;
+}
+
+.footer-playback {
+  width: 60%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.footer-playback i {
+  padding: 1.5rem;
+}
+.fa-circle-pause,
+.fa-circle-play {
+  font-size: 60px;
+}
+.fa-backward-step {
+  font-size: 20px;
+}
+#footerIcon:hover {
+  cursor: pointer;
+}
+#footerBack,
+#footerPrev,
+#footerNext,
+#footerForward:hover {
+  cursor: pointer;
+}
+
+.footer-end {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  width: 20%;
+  height: 100%;
+  margin-right: 0.7rem;
+}
+.footer-end i {
+  margin: 20px;
+}
+
+@media screen and (max-width: 1205px) {
+  .bell-icon {
+    display: none;
+  }
+
+  nav .navbar-nav,
+  form {
+    margin-left: -45px;
+    margin-bottom: 1.5rem;
+  }
+  .main-div {
+    flex-direction: column;
+  }
+  section {
+    width: 100%;
+    height: 70%;
+  }
+
+  .content-container h4 {
+    display: none;
+  }
+  aside {
+    width: 100%;
+    height: 30%;
+    display: block;
+    position: static;
+    margin-left: -0.07rem;
+    margin-right: 0.5rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .queue-song {
+    margin-left: -0.5rem;
+  }
+
+  footer .playback-title,
+  .playback-icons,
+  .footer-end {
+    display: none;
+  }
+  .footer-image {
+    width: 20%;
+  }
+  .footer-playback {
+    width: 80%;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 1590px) {
+  .content-container h4 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer-image {
+    display: none;
+  }
+  .footer-playback {
+    width: 100%;
+  }
+  .main-div {
+    padding-left: 0.1rem;
+  }
+  #section-1 {
+    flex-direction: column;
+    width: 100%;
+    height: 42rem;
+    margin-bottom: -2rem;
+  }
+  .content-container h3 {
+    font-size: 3.6rem;
+  }
+  .content-container h5 {
+    margin-top: -10px;
+    margin-left: -5px;
+  }
+  .image-container {
+    width: 100%;
+    height: 60%;
+    border-bottom-left-radius: 0px;
+    background-position: top;
+  }
+
+  .content-container {
+    width: 100%;
+    height: 40%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #myFooter {
+    width: 100%;
+  }
+  .footer-playback {
+    justify-content: center;
+    padding: 0px;
+    margin-left: auto;
+  }
+
+  #footerBack,
+  #footerPrev,
+  #footerNext,
+  #footerForward {
+    margin: -15px;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .collapse form {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 1847px) {
+  #section-2 .latest-song {
+    width: 100%;
+    height: 10rem;
+  }
+}
